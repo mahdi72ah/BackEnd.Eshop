@@ -1,0 +1,15 @@
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.AssemblyInfoInputs.cache
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.AssemblyInfo.cs
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\bin\Debug\net5.0\Angular.Eshop.DataLayer.deps.json
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\bin\Debug\net5.0\Angular.Eshop.DataLayer.runtimeconfig.json
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\bin\Debug\net5.0\Angular.Eshop.DataLayer.runtimeconfig.dev.json
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\bin\Debug\net5.0\Angular.Eshop.DataLayer.dll
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\bin\Debug\net5.0\ref\Angular.Eshop.DataLayer.dll
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\bin\Debug\net5.0\Angular.Eshop.DataLayer.pdb
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.dll
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\ref\Angular.Eshop.DataLayer.dll
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.pdb
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.genruntimeconfig.cache
+C:\Users\Mika\BackEnd\Angular.Eshop\Angular.Eshop.DataLayer\obj\Debug\net5.0\Angular.Eshop.DataLayer.csprojAssemblyReference.cache

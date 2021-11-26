@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mika\\BaseApp\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj": {}
+    "C:\\Users\\Mika\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mika\\BaseApp\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj": {
+    "C:\\Users\\Mika\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mika\\BaseApp\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Mika\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj",
         "projectName": "Angular.Eshop.DataLayer",
-        "projectPath": "C:\\Users\\Mika\\BaseApp\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj",
+        "projectPath": "C:\\Users\\Mika\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\Angular.Eshop.DataLayer.csproj",
         "packagesPath": "C:\\Users\\Mika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mika\\BaseApp\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\Mika\\BackEnd\\Angular.Eshop\\Angular.Eshop.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mika\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,33 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "FluentValidation": {
+            "EntityFramework": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
             }
           },
           "imports": [
