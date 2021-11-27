@@ -1,4 +1,7 @@
+using Angular.Eshop.Core.Services.Implementations;
+using Angular.Eshop.Core.Services.Interfaces;
 using Angular.Eshop.Core.Utilities.Extentions.Conection;
+using Angular.Eshop.DataLayer.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -38,6 +41,35 @@ namespace Angular.Eshop.webApi
                      .Build()
                      );
             services.AddApplicationDbContext(Configuration);
+
+
+
+            #region Add DbContext
+
+             #region Add DbContext
+
+            services.AddApplicationDbContext(Configuration);
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            #endregion
+
+
+            #region Application Services
+
+            services.AddScoped<IUserService, UserService>();// حالا من توی هر کنترلری که بیام و ای یوزر سرویس رو صداش بزنم میاد و یوزر سرویس رو که در پروژه کور ایجادش کردم رو میاره برام
+
+            #endregion
+
+            services.AddApplicationDbContext(Configuration);
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            //AddScoped => اد اسکوپ به معنی این هستش که سی کانتکس برای هر یوزری که وارد سایت میشه میاد و یک کانتکس جدید که یک شمای کلی از دیتابیس من هستش رو میسازه و اینطور نیست که همه ی کاربران بیادو از یک کانتکس استفاده کنن که این اصلا عقلانی نیست
+
+
+            #endregion
+
+
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -65,6 +97,10 @@ namespace Angular.Eshop.webApi
             {
                 endpoints.MapControllers();
             });
+
+
+      
+
         }
     }
 }

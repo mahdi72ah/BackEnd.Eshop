@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Angular.Eshop.Core\Angular.Eshop.Core.csproj" />
     <ProjectReference Include="..\Angular.Eshop.DataLayer\Angular.Eshop.DataLayer.csproj" />
   </ItemGroup>
