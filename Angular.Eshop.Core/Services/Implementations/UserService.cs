@@ -3,10 +3,8 @@ using Angular.Eshop.DataLayer.Entities.Account;
 using Angular.Eshop.DataLayer.Repository;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Angular.Eshop.Core.Services.Implementations
 {

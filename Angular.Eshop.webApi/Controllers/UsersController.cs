@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Angular.Eshop.webApi.Controllers
@@ -20,9 +21,9 @@ namespace Angular.Eshop.webApi.Controllers
         }
 
         [HttpGet("users")]
-        public async Task<IActionResult> GetUsers()
+        public async Task<IActionResult> Users()
         {
-            return new ObjectResult(userservice.GetAllUsers());
+            return new ObjectResult(await userservice.GetAllUsers());
         }
 
     }
