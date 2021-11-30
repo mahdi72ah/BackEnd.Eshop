@@ -51,6 +51,8 @@ namespace Angular.Eshop.DataLayer.Entities.site.Product
 
         public ICollection<ProductGllary> productGllaries { get; set; }
 
+        public ICollection<ProductVisit> productVisits { get; set; }
+
         #endregion
 
     }
