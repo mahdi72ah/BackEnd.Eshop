@@ -53,6 +53,8 @@ namespace Angular.Eshop.DataLayer.Entities.site.Product
 
         public ICollection<ProductVisit> productVisits { get; set; }
 
+        public ICollection<ProductSelectedCategory> ProductSelectedCategories { get; set; }
+
         #endregion
 
     }

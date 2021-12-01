@@ -2,7 +2,8 @@
 using System.Linq;
 using Angular.Eshop.DataLayer.Entities.Account;
 using Angular.Eshop.DataLayer.Entities.access;
-
+using Angular.Eshop.DataLayer.Entities.site.Product;
+using Angular.Eshop.DataLayer.Entities.site.slider;
 
 namespace Angular.Eshop.DataLayer.Context
 {
@@ -19,6 +20,12 @@ namespace Angular.Eshop.DataLayer.Context
         public DbSet<Users> users { get; set; }
         public DbSet<Role> roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<Product> products { get; set; }
+        public DbSet<ProductVisit> productVisits { get; set; }
+        public DbSet<ProductGllary> productGllaries { get; set; }
+        public DbSet<ProductSelectedCategory> productSelectedCategories { get; set; }
+        public DbSet<slider> sliders { get; set; }
+        public DbSet<ProductCategory> productCategories { get; set; }
 
         #endregion
 

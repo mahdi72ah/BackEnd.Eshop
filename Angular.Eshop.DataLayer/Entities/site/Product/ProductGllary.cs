@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Angular.Eshop.DataLayer.Entities.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Angular.Eshop.DataLayer.Entities.site.Product
 {
-    public class ProductGllary
+    public class ProductGllary:BaseEntities
     {
         #region Propertiees
         public long ProductId { get; set; }

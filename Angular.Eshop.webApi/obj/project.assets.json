@@ -6101,8 +6101,10 @@
     "net5.0": [
       "Angular.Eshop.Core >= 1.0.0",
       "Angular.Eshop.DataLayer >= 1.0.0",
+      "EntityFramework >= 6.4.4",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.12",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -6153,6 +6155,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.4.4, )"
+          },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[5.0.12, )"
@@ -6160,6 +6166,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.0.12, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.12, )"
           },
