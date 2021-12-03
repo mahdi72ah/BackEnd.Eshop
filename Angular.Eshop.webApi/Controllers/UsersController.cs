@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 
 namespace Angular.Eshop.webApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : SiteBaseController
     {
         private IUserService userservice;
 

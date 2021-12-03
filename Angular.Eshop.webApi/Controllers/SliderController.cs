@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Angular.Eshop.webApi.Controllers
 {
-    public class SliderController : Controller
+    public class SliderController : SiteBaseController
     {
         #region Constractor
 
@@ -24,9 +24,9 @@ namespace Angular.Eshop.webApi.Controllers
         [HttpGet("GetActiveSliders")]
         public async Task<IActionResult>  GetActiveSliders()
         {
-            //return new JsonResult(await slidersevice.GetactiveSliders());این برای زمانی بود که کلاس جیسون ریسپانس رو پیاده سازی نکرده بودم
-
-            return JsonResponseStatus.Success(await slidersevice.GetactiveSliders());
+            var slider = await slidersevice.GetactiveSliders();
+            return JsonResponseStatus.Success(slider);
         }
+
     }
 }

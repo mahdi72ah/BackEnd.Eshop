@@ -3,10 +3,12 @@ using Angular.Eshop.DataLayer.Entities.site.slider;
 using Angular.Eshop.DataLayer.Repository;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+
 
 namespace Angular.Eshop.Core.Services.Implementations
 {
@@ -34,12 +36,13 @@ namespace Angular.Eshop.Core.Services.Implementations
         #region Function
         public async Task<List<slider>> GetactiveSliders()
         {
-            return await genericRepository.GetEntitiesQuery().ToListAsync();
+            return await genericRepository.GetEntitiesQuery().Where(p => !p.IsDelete).ToListAsync();
         }
+
 
         public async Task<List<slider>> GetAllSliders()
         {
-            return await genericRepository.GetEntitiesQuery().Where(p => !p.IsDelete).ToListAsync();   
+            return await genericRepository.GetEntitiesQuery().ToListAsync();
         }
 
 

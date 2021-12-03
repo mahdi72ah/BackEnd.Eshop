@@ -43,6 +43,24 @@ namespace Angular.Eshop.webApi
                      );
             services.AddApplicationDbContext(Configuration);
 
+            #region CorsError
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableTimeEshopCORS", builder =>
+                {
+                    builder
+                        //.AllowAnyOrigin()
+                        .SetIsOriginAllowed(_ => true)
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials()
+                        .Build();
+                });
+            });
+
+
+            #endregion
 
 
             #region Add DbContext
@@ -90,7 +108,15 @@ namespace Angular.Eshop.webApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Angular.Eshop.webApi v1"));
             }
 
+            #region MoarefiCorse
+
+            app.UseCors("EnableTimeEshopCORS");
+
+            #endregion
+
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
