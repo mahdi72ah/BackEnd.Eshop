@@ -1,6 +1,7 @@
 using Angular.Eshop.Core.Services.Implementations;
 using Angular.Eshop.Core.Services.Interfaces;
 using Angular.Eshop.Core.Utilities.Extentions.Conection;
+using Angular.Eshop.DataLayer.Entities.site.Product;
 using Angular.Eshop.DataLayer.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,10 +47,11 @@ namespace Angular.Eshop.webApi
 
             #region Add DbContext
 
-             #region Add DbContext
+            // معرفی جنریک ریپوزیتوری  در پایین منظور همون ریپوزیتوزی اصلی هستش
+            #region Add DbContext 
 
             services.AddApplicationDbContext(Configuration);
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));// معرفی جنریک ریپوزیتوری
 
             #endregion
 
@@ -65,7 +67,8 @@ namespace Angular.Eshop.webApi
 
             //AddScoped => اد اسکوپ به معنی این هستش که سی کانتکس برای هر یوزری که وارد سایت میشه میاد و یک کانتکس جدید که یک شمای کلی از دیتابیس من هستش رو میسازه و اینطور نیست که همه ی کاربران بیادو از یک کانتکس استفاده کنن که این اصلا عقلانی نیست
 
-
+            services.AddScoped<ISliderService, SliderService>();// این میگه هر جا ای اسلایدر سرویس دیدی یه دونه اسلایدر سرویس بهش بده
+            services.AddScoped<IProductService, ProductService>();
             #endregion
 
 
@@ -99,7 +102,7 @@ namespace Angular.Eshop.webApi
             });
 
 
-      
+
 
         }
     }
