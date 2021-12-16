@@ -16,8 +16,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 
 namespace Angular.Eshop.webApi
 {
@@ -35,6 +39,49 @@ namespace Angular.Eshop.webApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            #region Authentication
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = "https://localhost:44381",
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("AngularEshopJwtBearer"))
+                    };
+                });
+
+            #endregion
+
+            #region CORS
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCors", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials()
+                        .Build();
+                });
+            });
+
+            #endregion
+
+
+
+
+
+
+
+
             services.AddSingleton<IConfiguration>( // معرفی کلاس اپ ستینگ به برنامه
 
                      new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
@@ -43,24 +90,6 @@ namespace Angular.Eshop.webApi
                      );
             services.AddApplicationDbContext(Configuration);
 
-            #region CorsError
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("EnableTimeEshopCORS", builder =>
-                {
-                    builder
-                        //.AllowAnyOrigin()
-                        .SetIsOriginAllowed(_ => true)
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials()
-                        .Build();
-                });
-            });
-
-
-            #endregion
 
 
             #region Add DbContext
@@ -101,18 +130,17 @@ namespace Angular.Eshop.webApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors("EnableCors");
+            app.UseAuthentication();
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Angular.Eshop.webApi v1"));
             }
-
-            #region MoarefiCorse
-
-            app.UseCors("EnableTimeEshopCORS");
-
-            #endregion
 
             app.UseHttpsRedirection();
 

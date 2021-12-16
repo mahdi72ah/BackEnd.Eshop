@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Angular.Eshop.webApi.Controllers
@@ -24,6 +25,7 @@ namespace Angular.Eshop.webApi.Controllers
         [HttpGet("GetActiveSliders")]
         public async Task<IActionResult>  GetActiveSliders()
         {
+            Thread.Sleep(1000);
             var slider = await slidersevice.GetactiveSliders();
             return JsonResponseStatus.Success(slider);
         }
